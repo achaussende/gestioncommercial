@@ -48,6 +48,10 @@ namespace Persistance
                 instance = new Connexion();
             return instance;
         }
+
+        /// <summary>
+        /// Fermeture de la connexion
+        /// </summary>
         public static void closeConnexion()
         {
             macnx.Close();
