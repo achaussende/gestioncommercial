@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MesErreurs;
 using Persistance;
+using Metier;
 
 namespace Gestion_Commerciale
 {

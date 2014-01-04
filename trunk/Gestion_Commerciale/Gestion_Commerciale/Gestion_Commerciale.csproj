@@ -48,7 +48,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Presentation\FClient.cs" />
+    <Compile Include="Presentation\FClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Presentation\FClient.designer.cs">
       <DependentUpon>FClient.cs</DependentUpon>
     </Compile>
