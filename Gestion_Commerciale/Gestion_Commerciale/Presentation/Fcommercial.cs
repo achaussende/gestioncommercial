@@ -59,5 +59,11 @@ namespace Gestion_Commerciale
             }
         }
 
+        private void MS_FicheClient_Click(object sender, EventArgs e)
+        {
+            FClient fc = new FClient();
+            fc.ShowDialog();
+        }
+
     }
 }

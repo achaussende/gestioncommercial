@@ -105,6 +105,7 @@
             this.MS_FicheClient.Name = "MS_FicheClient";
             this.MS_FicheClient.Size = new System.Drawing.Size(164, 22);
             this.MS_FicheClient.Text = "Fiche Client";
+            this.MS_FicheClient.Click += new System.EventHandler(this.MS_FicheClient_Click);
             // 
             // TS_FicheVendeur
             // 

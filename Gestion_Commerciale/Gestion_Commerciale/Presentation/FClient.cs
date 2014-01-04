@@ -8,8 +8,9 @@ using System.Text;
 using System.Windows.Forms;
 using Utilitaires;
 using Metier;
+using MesErreurs;
 
-namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
+namespace Gestion_Commerciale
 {
     public partial class FClient : Form
     {
@@ -17,31 +18,22 @@ namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
         {
             InitializeComponent();
 
-            LB_NOM.Text = "";
-            LB_PRENOM.Text = "";
-            LB_SOCIETE.Text = "";
-            LB_ADRESSE.Text = "";
-            LB_VILLE.Text = "";
-            LB_CODEPOSTAL.Text = "";
-            Bt_Details.Visible = false;
-
-            /*List<String> mesNumeros;
+            List<String> mesNumeros;
             try
             {
-                Service unService = Service.getInstance();
-                mesNumeros = unService.LectureNoClient();
-                foreach (String item in mesNumeros)
-                {
-                    CB_ListeClients.Items.Add(item);
-                }
+                Clientel unClient = new Clientel();
+                // Lecture classique
+                CB_ListeClients.DataSource = unClient.LectureNoClient();
 
+                mesNumeros = unClient.LectureNoClient();
+
+                // Lecture à partir d’un data source
+                CB_ListeClients.DataSource = unClient.LectureNoClient();
             }
             catch (MonException exception)
             {
                 MessageBox.Show(exception.MessageApplication(), exception.Message);
-            }*/
-
-
+            }
         }
 
         /// <summary> 
@@ -53,67 +45,33 @@ namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
         {
             Close();
         }
-        private void Bt_Details_Click(object sender, EventArgs e)
-        {
-            ActualiserListe();
-        }
 
-        /// <summary> 
-        /// Charger les informations sur le client sélectionné dans la liste déroulante 
-        /// </summary> 
-        private void ActualiserListe()
+        private void bt_Interroger_Click(object sender, EventArgs e)
         {
-            /*clientel monclient = new clientel();
-            Service unService = Service.getInstance();
-            int index = CB_ListeClients.SelectedIndex;
-            if (index != -1)
+            string numCli;
+            Clientel unClient = new Clientel();
+            Clientel unClientCherche;
+            try
             {
-                unService.RechercheUnClient(CB_ListeClients.Items[index].ToString());
-
-                LB_NOM.Text = monclient.NOM_CL;
-                LB_PRENOM.Text = monclient.PRENOM_CL;
-                LB_SOCIETE.Text = monclient.SOCIETE;
-                LB_ADRESSE.Text = monclient.ADRESSE_CL;
-                LB_VILLE.Text = monclient.VILLE_CL;
-                LB_CODEPOSTAL.Text = monclient.CODE_POST_CL;
-
-                LB_NOCLIENT.Text = "Client n°" + CB_ListeClients.Items[index].ToString();
+                numCli = CB_ListeClients.Text;
+                unClientCherche = unClient.RechercheUnClient(numCli);
+                LB_NOM.Text = "Nom : " + unClientCherche.Nom_cl;
+                LB_PRENOM.Text = "Prénom : " + unClientCherche.Prenom_cl;
+                LB_SOCIETE.Text = "Societe : " + unClientCherche.Societe;
+                LB_ADRESSE.Text = "Adresse : " + unClientCherche.Adresse_cl;
+                LB_VILLE.Text = "Ville : " + unClientCherche.Ville_cl;
+                LB_CODEPOSTAL.Text = "Code Postal :" + unClientCherche.Code_post_cl;
             }
-            else
+            catch (MonException exception)
             {
-                LB_NOM.Text = "";
-                LB_PRENOM.Text = "";
-                LB_SOCIETE.Text = "";
-                LB_ADRESSE.Text = "";
-                LB_VILLE.Text = "";
-                LB_CODEPOSTAL.Text = "";
-
-                LB_NOCLIENT.Text = "Veuillez choisir un client";
-            }*/
-        }
-        private void FClient_Load(object sender, EventArgs e)
-        {
-
+                MessageBox.Show(exception.MessageApplication(), exception.Message);
+            }
         }
 
         private void CB_ListeClients_SelectedIndexChanged(object sender, EventArgs e)
         {
-            ActualiserListe();
+
         }
 
-        private void CB_ListeClients_TextChanged(object sender, EventArgs e)
-        {
-            ActualiserListe();
-        }
-
-        /// <summary> 
-        /// empêcher la saisie à la main d'un numéro 
-        /// </summary> 
-        /// <param name="sender"></param> 
-        /// <param name="e"></param> 
-        private void CB_ListeClients_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
-        }
     }
 }
