@@ -46,7 +46,6 @@
     <Compile Include="Commandes.cs" />
     <Compile Include="Compose.cs" />
     <Compile Include="Detail_Cde.cs" />
-    <Compile Include="FermetureApplication.cs" />
     <Compile Include="OuvertureApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vendeur.cs" />

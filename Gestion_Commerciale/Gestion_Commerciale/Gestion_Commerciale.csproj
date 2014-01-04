@@ -48,6 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\FClient.cs" />
+    <Compile Include="Presentation\FClient.designer.cs">
+      <DependentUpon>FClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\Fcommercial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\FClient.resx">
+      <DependentUpon>FClient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Fcommercial.resx">
       <DependentUpon>Fcommercial.cs</DependentUpon>
     </EmbeddedResource>
@@ -68,7 +75,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
