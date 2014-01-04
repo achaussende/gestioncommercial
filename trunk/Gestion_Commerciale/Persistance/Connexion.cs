@@ -12,6 +12,7 @@ namespace Persistance
     public class Connexion
     {
         private static MySql.Data.MySqlClient.MySqlConnection macnx;
+        private static Connexion instance;
         /// <summary>
         ///
         /// </summary>
@@ -21,7 +22,7 @@ namespace Persistance
         private Connexion()
         {
         }
-        private static Connexion instance;
+        
         public MySqlConnection getConnexion()
         {
             try

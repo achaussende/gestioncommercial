@@ -20,8 +20,6 @@ namespace Metier
             {
                 //A revérifer
                 Connexion macnx = Connexion.getInstance();
-                MySqlConnection mysqlcnx = Connexion.getInstance().getConnexion();
-                macnx.closeconnexion();
                 return true;
             }
             catch (MonException excep)
