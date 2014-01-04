@@ -63,5 +63,21 @@ namespace Metier
             get { return commission; }
             set { commission = value; }
         }
+
+        public Vendeur(int hashCode, String no_vendeur, String nom_vendeur, String prenom_vendeur,
+            String date_embau, String ville_vend, String no_chef_eq, String salaire_vend, String commission)
+        {
+            this.no_vendeur = no_vendeur;
+            this.nom_vendeur = nom_vendeur;
+            this.prenom_vendeur = prenom_vendeur;
+            this.date_embau = date_embau;
+            this.ville_vend = ville_vend;
+            this.no_chef_eq = no_chef_eq;
+            this.salaire_vend = salaire_vend;
+            this.commission = commission;
+        }
+
+        public Vendeur()
+        { }
     }
 }
