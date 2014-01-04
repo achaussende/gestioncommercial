@@ -18,8 +18,6 @@ namespace Metier
             {
                 try
             {
-                    //A revérifer
-                Connexion macnx = Connexion.getInstance();
                 MySqlConnection mysqlcnx = Connexion.getInstance().getConnexion();
                 return true;
             }
