@@ -25,7 +25,7 @@ namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
             LB_CODEPOSTAL.Text = "";
             Bt_Details.Visible = false;
 
-            List<String> mesNumeros;
+            /*List<String> mesNumeros;
             try
             {
                 Service unService = Service.getInstance();
@@ -39,7 +39,7 @@ namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
             catch (MonException exception)
             {
                 MessageBox.Show(exception.MessageApplication(), exception.Message);
-            }
+            }*/
 
 
         }
@@ -63,7 +63,7 @@ namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
         /// </summary> 
         private void ActualiserListe()
         {
-            clientel monclient = new clientel();
+            /*clientel monclient = new clientel();
             Service unService = Service.getInstance();
             int index = CB_ListeClients.SelectedIndex;
             if (index != -1)
@@ -89,7 +89,7 @@ namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
                 LB_CODEPOSTAL.Text = "";
 
                 LB_NOCLIENT.Text = "Veuillez choisir un client";
-            }
+            }*/
         }
         private void FClient_Load(object sender, EventArgs e)
         {
