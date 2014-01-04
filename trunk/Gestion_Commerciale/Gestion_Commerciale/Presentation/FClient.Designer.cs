@@ -1,4 +1,4 @@
-﻿namespace CARON_CHAUSSENDE_CommercialEntity.Presentation
+﻿namespace Gestion_Commerciale
 {
     partial class FClient
     {
@@ -210,7 +210,6 @@
             this.Bt_Details.TabIndex = 8;
             this.Bt_Details.Text = "Détails";
             this.Bt_Details.UseVisualStyleBackColor = true;
-            this.Bt_Details.Click += new System.EventHandler(this.Bt_Details_Click);
             // 
             // label8
             // 
@@ -256,7 +255,6 @@
             this.Controls.Add(this.Tlabel_infos);
             this.Name = "FClient";
             this.Text = "Fiche Client";
-            this.Load += new System.EventHandler(this.FClient_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
