@@ -29,59 +29,76 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.MS_Fichier = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_Quitter = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_Interroger = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Fichier = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Connexion = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Deconnexion = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Quitter = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Interroger = new System.Windows.Forms.ToolStripMenuItem();
             this.MS_FicheClient = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_FicheVendeur = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_ListeCommande = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_Gerer = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_Commande = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_Article = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_AjouterCommande = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_SupprimerCommande = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_AugmenterPrix = new System.Windows.Forms.ToolStripMenuItem();
-            this.MS_AjouterArticle = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_FicheVendeur = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_ListeCommande = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Gerer = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Commande = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_AjouterCommande = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_SupprimerCommande = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_Article = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_AjouterArticle = new System.Windows.Forms.ToolStripMenuItem();
             this.MS_SupprimerArticle = new System.Windows.Forms.ToolStripMenuItem();
+            this.TS_AugmenterPrix = new System.Windows.Forms.ToolStripMenuItem();
             this.L_GestionCommerciale = new System.Windows.Forms.Label();
+            this.lbl_etat = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MS_Fichier,
-            this.MS_Interroger,
-            this.MS_Gerer});
+            this.TS_Fichier,
+            this.TS_Interroger,
+            this.TS_Gerer});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(645, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // MS_Fichier
+            // TS_Fichier
             // 
-            this.MS_Fichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MS_Quitter});
-            this.MS_Fichier.Name = "MS_Fichier";
-            this.MS_Fichier.Size = new System.Drawing.Size(54, 20);
-            this.MS_Fichier.Text = "Fichier";
+            this.TS_Fichier.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TS_Connexion,
+            this.TS_Deconnexion,
+            this.TS_Quitter});
+            this.TS_Fichier.Name = "TS_Fichier";
+            this.TS_Fichier.Size = new System.Drawing.Size(54, 20);
+            this.TS_Fichier.Text = "Fichier";
             // 
-            // MS_Quitter
+            // TS_Connexion
             // 
-            this.MS_Quitter.Name = "MS_Quitter";
-            this.MS_Quitter.Size = new System.Drawing.Size(152, 22);
-            this.MS_Quitter.Text = "Quitter";
+            this.TS_Connexion.Name = "TS_Connexion";
+            this.TS_Connexion.Size = new System.Drawing.Size(152, 22);
+            this.TS_Connexion.Text = "Connexion";
             // 
-            // MS_Interroger
+            // TS_Deconnexion
             // 
-            this.MS_Interroger.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TS_Deconnexion.Name = "TS_Deconnexion";
+            this.TS_Deconnexion.Size = new System.Drawing.Size(152, 22);
+            this.TS_Deconnexion.Text = "Déconnexion";
+            // 
+            // TS_Quitter
+            // 
+            this.TS_Quitter.Name = "TS_Quitter";
+            this.TS_Quitter.Size = new System.Drawing.Size(152, 22);
+            this.TS_Quitter.Text = "Quitter";
+            // 
+            // TS_Interroger
+            // 
+            this.TS_Interroger.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MS_FicheClient,
-            this.MS_FicheVendeur,
-            this.MS_ListeCommande});
-            this.MS_Interroger.Name = "MS_Interroger";
-            this.MS_Interroger.Size = new System.Drawing.Size(71, 20);
-            this.MS_Interroger.Text = "Interroger";
+            this.TS_FicheVendeur,
+            this.TS_ListeCommande});
+            this.TS_Interroger.Name = "TS_Interroger";
+            this.TS_Interroger.Size = new System.Drawing.Size(71, 20);
+            this.TS_Interroger.Text = "Interroger";
             // 
             // MS_FicheClient
             // 
@@ -89,75 +106,75 @@
             this.MS_FicheClient.Size = new System.Drawing.Size(164, 22);
             this.MS_FicheClient.Text = "Fiche Client";
             // 
-            // MS_FicheVendeur
+            // TS_FicheVendeur
             // 
-            this.MS_FicheVendeur.Name = "MS_FicheVendeur";
-            this.MS_FicheVendeur.Size = new System.Drawing.Size(164, 22);
-            this.MS_FicheVendeur.Text = "Fiche Vendeur";
+            this.TS_FicheVendeur.Name = "TS_FicheVendeur";
+            this.TS_FicheVendeur.Size = new System.Drawing.Size(164, 22);
+            this.TS_FicheVendeur.Text = "Fiche Vendeur";
             // 
-            // MS_ListeCommande
+            // TS_ListeCommande
             // 
-            this.MS_ListeCommande.Name = "MS_ListeCommande";
-            this.MS_ListeCommande.Size = new System.Drawing.Size(164, 22);
-            this.MS_ListeCommande.Text = "Liste Commande";
+            this.TS_ListeCommande.Name = "TS_ListeCommande";
+            this.TS_ListeCommande.Size = new System.Drawing.Size(164, 22);
+            this.TS_ListeCommande.Text = "Liste Commande";
             // 
-            // MS_Gerer
+            // TS_Gerer
             // 
-            this.MS_Gerer.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MS_Commande,
-            this.MS_Article,
-            this.MS_AugmenterPrix});
-            this.MS_Gerer.Name = "MS_Gerer";
-            this.MS_Gerer.Size = new System.Drawing.Size(47, 20);
-            this.MS_Gerer.Text = "Gérer";
+            this.TS_Gerer.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TS_Commande,
+            this.TS_Article,
+            this.TS_AugmenterPrix});
+            this.TS_Gerer.Name = "TS_Gerer";
+            this.TS_Gerer.Size = new System.Drawing.Size(47, 20);
+            this.TS_Gerer.Text = "Gérer";
             // 
-            // MS_Commande
+            // TS_Commande
             // 
-            this.MS_Commande.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MS_AjouterCommande,
-            this.MS_SupprimerCommande});
-            this.MS_Commande.Name = "MS_Commande";
-            this.MS_Commande.Size = new System.Drawing.Size(173, 22);
-            this.MS_Commande.Text = "Commande";
+            this.TS_Commande.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TS_AjouterCommande,
+            this.TS_SupprimerCommande});
+            this.TS_Commande.Name = "TS_Commande";
+            this.TS_Commande.Size = new System.Drawing.Size(173, 22);
+            this.TS_Commande.Text = "Commande";
             // 
-            // MS_Article
+            // TS_AjouterCommande
             // 
-            this.MS_Article.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MS_AjouterArticle,
+            this.TS_AjouterCommande.Name = "TS_AjouterCommande";
+            this.TS_AjouterCommande.Size = new System.Drawing.Size(152, 22);
+            this.TS_AjouterCommande.Text = "Ajouter";
+            // 
+            // TS_SupprimerCommande
+            // 
+            this.TS_SupprimerCommande.Name = "TS_SupprimerCommande";
+            this.TS_SupprimerCommande.Size = new System.Drawing.Size(152, 22);
+            this.TS_SupprimerCommande.Text = "Supprimer";
+            // 
+            // TS_Article
+            // 
+            this.TS_Article.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TS_AjouterArticle,
             this.MS_SupprimerArticle});
-            this.MS_Article.Name = "MS_Article";
-            this.MS_Article.Size = new System.Drawing.Size(173, 22);
-            this.MS_Article.Text = "Article";
+            this.TS_Article.Name = "TS_Article";
+            this.TS_Article.Size = new System.Drawing.Size(173, 22);
+            this.TS_Article.Text = "Article";
             // 
-            // MS_AjouterCommande
+            // TS_AjouterArticle
             // 
-            this.MS_AjouterCommande.Name = "MS_AjouterCommande";
-            this.MS_AjouterCommande.Size = new System.Drawing.Size(152, 22);
-            this.MS_AjouterCommande.Text = "Ajouter";
-            // 
-            // MS_SupprimerCommande
-            // 
-            this.MS_SupprimerCommande.Name = "MS_SupprimerCommande";
-            this.MS_SupprimerCommande.Size = new System.Drawing.Size(152, 22);
-            this.MS_SupprimerCommande.Text = "Supprimer";
-            // 
-            // MS_AugmenterPrix
-            // 
-            this.MS_AugmenterPrix.Name = "MS_AugmenterPrix";
-            this.MS_AugmenterPrix.Size = new System.Drawing.Size(173, 22);
-            this.MS_AugmenterPrix.Text = "Augmenter les prix";
-            // 
-            // MS_AjouterArticle
-            // 
-            this.MS_AjouterArticle.Name = "MS_AjouterArticle";
-            this.MS_AjouterArticle.Size = new System.Drawing.Size(152, 22);
-            this.MS_AjouterArticle.Text = "Ajouter";
+            this.TS_AjouterArticle.Name = "TS_AjouterArticle";
+            this.TS_AjouterArticle.Size = new System.Drawing.Size(152, 22);
+            this.TS_AjouterArticle.Text = "Ajouter";
             // 
             // MS_SupprimerArticle
             // 
             this.MS_SupprimerArticle.Name = "MS_SupprimerArticle";
             this.MS_SupprimerArticle.Size = new System.Drawing.Size(152, 22);
             this.MS_SupprimerArticle.Text = "Supprimer";
+            // 
+            // TS_AugmenterPrix
+            // 
+            this.TS_AugmenterPrix.Name = "TS_AugmenterPrix";
+            this.TS_AugmenterPrix.Size = new System.Drawing.Size(173, 22);
+            this.TS_AugmenterPrix.Text = "Augmenter les prix";
             // 
             // L_GestionCommerciale
             // 
@@ -169,11 +186,23 @@
             this.L_GestionCommerciale.TabIndex = 1;
             this.L_GestionCommerciale.Text = "GESTION COMMERCIALE";
             // 
+            // lbl_etat
+            // 
+            this.lbl_etat.AutoSize = true;
+            this.lbl_etat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_etat.ForeColor = System.Drawing.Color.ForestGreen;
+            this.lbl_etat.Location = new System.Drawing.Point(13, 329);
+            this.lbl_etat.Name = "lbl_etat";
+            this.lbl_etat.Size = new System.Drawing.Size(67, 16);
+            this.lbl_etat.TabIndex = 2;
+            this.lbl_etat.Text = "label_etat";
+            // 
             // Fcommercial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 354);
+            this.Controls.Add(this.lbl_etat);
             this.Controls.Add(this.L_GestionCommerciale);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -190,21 +219,24 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem MS_Fichier;
-        private System.Windows.Forms.ToolStripMenuItem MS_Quitter;
-        private System.Windows.Forms.ToolStripMenuItem MS_Interroger;
+        private System.Windows.Forms.ToolStripMenuItem TS_Fichier;
+        private System.Windows.Forms.ToolStripMenuItem TS_Quitter;
+        private System.Windows.Forms.ToolStripMenuItem TS_Interroger;
         private System.Windows.Forms.ToolStripMenuItem MS_FicheClient;
-        private System.Windows.Forms.ToolStripMenuItem MS_FicheVendeur;
-        private System.Windows.Forms.ToolStripMenuItem MS_ListeCommande;
-        private System.Windows.Forms.ToolStripMenuItem MS_Gerer;
-        private System.Windows.Forms.ToolStripMenuItem MS_Commande;
-        private System.Windows.Forms.ToolStripMenuItem MS_AjouterCommande;
-        private System.Windows.Forms.ToolStripMenuItem MS_SupprimerCommande;
-        private System.Windows.Forms.ToolStripMenuItem MS_Article;
-        private System.Windows.Forms.ToolStripMenuItem MS_AjouterArticle;
+        private System.Windows.Forms.ToolStripMenuItem TS_FicheVendeur;
+        private System.Windows.Forms.ToolStripMenuItem TS_ListeCommande;
+        private System.Windows.Forms.ToolStripMenuItem TS_Gerer;
+        private System.Windows.Forms.ToolStripMenuItem TS_Commande;
+        private System.Windows.Forms.ToolStripMenuItem TS_AjouterCommande;
+        private System.Windows.Forms.ToolStripMenuItem TS_SupprimerCommande;
+        private System.Windows.Forms.ToolStripMenuItem TS_Article;
+        private System.Windows.Forms.ToolStripMenuItem TS_AjouterArticle;
         private System.Windows.Forms.ToolStripMenuItem MS_SupprimerArticle;
-        private System.Windows.Forms.ToolStripMenuItem MS_AugmenterPrix;
+        private System.Windows.Forms.ToolStripMenuItem TS_AugmenterPrix;
         private System.Windows.Forms.Label L_GestionCommerciale;
+        private System.Windows.Forms.ToolStripMenuItem TS_Connexion;
+        private System.Windows.Forms.ToolStripMenuItem TS_Deconnexion;
+        private System.Windows.Forms.Label lbl_etat;
 
     }
 }
