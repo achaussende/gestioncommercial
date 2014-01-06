@@ -60,6 +60,12 @@
     <Compile Include="Presentation\Fcommercial.Designer.cs">
       <DependentUpon>Fcommercial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\FListeCdes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FListeCdes.Designer.cs">
+      <DependentUpon>FListeCdes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentation\FClient.resx">
@@ -67,6 +73,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Fcommercial.resx">
       <DependentUpon>Fcommercial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FListeCdes.resx">
+      <DependentUpon>FListeCdes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
