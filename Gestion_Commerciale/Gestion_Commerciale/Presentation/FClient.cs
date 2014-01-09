@@ -14,6 +14,9 @@ namespace Gestion_Commerciale
 {
     public partial class FClient : Form
     {
+        /// <summary>
+        /// Constructeur de la fiche Client
+        /// </summary>
         public FClient()
         {
             InitializeComponent();
@@ -55,12 +58,13 @@ namespace Gestion_Commerciale
             {
                 numCli = CB_ListeClients.Text;
                 unClientCherche = unClient.RechercheUnClient(numCli);
-                LB_NOM.Text = "Nom : " + unClientCherche.Nom_cl;
-                LB_PRENOM.Text = "Prénom : " + unClientCherche.Prenom_cl;
-                LB_SOCIETE.Text = "Societe : " + unClientCherche.Societe;
-                LB_ADRESSE.Text = "Adresse : " + unClientCherche.Adresse_cl;
-                LB_VILLE.Text = "Ville : " + unClientCherche.Ville_cl;
-                LB_CODEPOSTAL.Text = "Code Postal :" + unClientCherche.Code_post_cl;
+                LB_NOCLIENT.Text = numCli;
+                LB_NOM.Text = unClientCherche.Nom_cl;
+                LB_PRENOM.Text = unClientCherche.Prenom_cl;
+                LB_SOCIETE.Text = unClientCherche.Societe;
+                LB_ADRESSE.Text = unClientCherche.Adresse_cl;
+                LB_VILLE.Text = unClientCherche.Ville_cl;
+                LB_CODEPOSTAL.Text = unClientCherche.Code_post_cl;
             }
             catch (MonException exception)
             {

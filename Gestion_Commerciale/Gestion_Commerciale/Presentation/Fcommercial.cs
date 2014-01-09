@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using MesErreurs;
 using Persistance;
 using Metier;
+using Gestion_Commerciale.Presentation;
 
 namespace Gestion_Commerciale
 {
@@ -63,6 +64,25 @@ namespace Gestion_Commerciale
         {
             FClient fc = new FClient();
             fc.ShowDialog();
+        }
+
+        private void TS_Quitter_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void TS_ListeCommande_Click(object sender, EventArgs e)
+        {
+            FListeCdes flc;
+            flc = new FListeCdes();
+            flc.ShowDialog();
+        }
+
+        private void TS_FicheVendeur_Click(object sender, EventArgs e)
+        {
+            FVendeur fv;
+            fv = new FVendeur();
+            fv.ShowDialog();
         }
 
     }

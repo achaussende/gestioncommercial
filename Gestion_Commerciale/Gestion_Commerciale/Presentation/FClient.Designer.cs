@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.Tlabel_infos = new System.Windows.Forms.Label();
-            this.Bt_Fermer = new System.Windows.Forms.Button();
             this.CB_ListeClients = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.Bt_Details = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.LB_NOCLIENT = new System.Windows.Forms.Label();
+            this.Bt_Fermer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Tlabel_infos
@@ -59,17 +59,6 @@
             this.Tlabel_infos.Size = new System.Drawing.Size(334, 31);
             this.Tlabel_infos.TabIndex = 0;
             this.Tlabel_infos.Text = "Informations sur le client";
-            // 
-            // Bt_Fermer
-            // 
-            this.Bt_Fermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bt_Fermer.Location = new System.Drawing.Point(491, 20);
-            this.Bt_Fermer.Name = "Bt_Fermer";
-            this.Bt_Fermer.Size = new System.Drawing.Size(75, 23);
-            this.Bt_Fermer.TabIndex = 1;
-            this.Bt_Fermer.Text = "FERMER";
-            this.Bt_Fermer.UseVisualStyleBackColor = true;
-            this.Bt_Fermer.Click += new System.EventHandler(this.Bt_Fermer_Click);
             // 
             // CB_ListeClients
             // 
@@ -153,6 +142,7 @@
             this.Bt_Interroger.TabIndex = 5;
             this.Bt_Interroger.Text = "Interroger";
             this.Bt_Interroger.UseVisualStyleBackColor = true;
+            this.Bt_Interroger.Click += new System.EventHandler(this.bt_Interroger_Click);
             // 
             // LB_SOCIETE
             // 
@@ -228,6 +218,17 @@
             this.LB_NOCLIENT.Size = new System.Drawing.Size(0, 13);
             this.LB_NOCLIENT.TabIndex = 10;
             // 
+            // Bt_Fermer
+            // 
+            this.Bt_Fermer.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bt_Fermer.Location = new System.Drawing.Point(491, 20);
+            this.Bt_Fermer.Name = "Bt_Fermer";
+            this.Bt_Fermer.Size = new System.Drawing.Size(75, 23);
+            this.Bt_Fermer.TabIndex = 1;
+            this.Bt_Fermer.Text = "FERMER";
+            this.Bt_Fermer.UseVisualStyleBackColor = true;
+            this.Bt_Fermer.Click += new System.EventHandler(this.Bt_Fermer_Click);
+            // 
             // FClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,7 +264,6 @@
         #endregion
 
         private System.Windows.Forms.Label Tlabel_infos;
-        private System.Windows.Forms.Button Bt_Fermer;
         private System.Windows.Forms.ComboBox CB_ListeClients;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -282,5 +282,6 @@
         private System.Windows.Forms.Button Bt_Details;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LB_NOCLIENT;
+        private System.Windows.Forms.Button Bt_Fermer;
     }
 }

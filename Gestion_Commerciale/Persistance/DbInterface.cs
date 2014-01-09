@@ -11,8 +11,9 @@ using System.Collections;
 
 namespace Persistance
 {
-    public class DbInterface
+    public abstract class DbInterface
     {
+
         /// <summary>
         /// Exécution de la requête demandée en paramètre, req,
         /// /// et retour du resultat : un DataTable

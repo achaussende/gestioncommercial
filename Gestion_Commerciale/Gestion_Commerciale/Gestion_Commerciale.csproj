@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\FAjoutCommande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FAjoutCommande.Designer.cs">
+      <DependentUpon>FAjoutCommande.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\FClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,8 +72,17 @@
     <Compile Include="Presentation\FListeCdes.Designer.cs">
       <DependentUpon>FListeCdes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\FVendeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FVendeur.Designer.cs">
+      <DependentUpon>FVendeur.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\FAjoutCommande.resx">
+      <DependentUpon>FAjoutCommande.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FClient.resx">
       <DependentUpon>FClient.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FListeCdes.resx">
       <DependentUpon>FListeCdes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FVendeur.resx">
+      <DependentUpon>FVendeur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
