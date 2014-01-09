@@ -75,20 +75,21 @@
             // TS_Connexion
             // 
             this.TS_Connexion.Name = "TS_Connexion";
-            this.TS_Connexion.Size = new System.Drawing.Size(152, 22);
+            this.TS_Connexion.Size = new System.Drawing.Size(143, 22);
             this.TS_Connexion.Text = "Connexion";
             // 
             // TS_Deconnexion
             // 
             this.TS_Deconnexion.Name = "TS_Deconnexion";
-            this.TS_Deconnexion.Size = new System.Drawing.Size(152, 22);
+            this.TS_Deconnexion.Size = new System.Drawing.Size(143, 22);
             this.TS_Deconnexion.Text = "Déconnexion";
             // 
             // TS_Quitter
             // 
             this.TS_Quitter.Name = "TS_Quitter";
-            this.TS_Quitter.Size = new System.Drawing.Size(152, 22);
+            this.TS_Quitter.Size = new System.Drawing.Size(143, 22);
             this.TS_Quitter.Text = "Quitter";
+            this.TS_Quitter.Click += new System.EventHandler(this.TS_Quitter_Click);
             // 
             // TS_Interroger
             // 
@@ -112,12 +113,14 @@
             this.TS_FicheVendeur.Name = "TS_FicheVendeur";
             this.TS_FicheVendeur.Size = new System.Drawing.Size(164, 22);
             this.TS_FicheVendeur.Text = "Fiche Vendeur";
+            this.TS_FicheVendeur.Click += new System.EventHandler(this.TS_FicheVendeur_Click);
             // 
             // TS_ListeCommande
             // 
             this.TS_ListeCommande.Name = "TS_ListeCommande";
             this.TS_ListeCommande.Size = new System.Drawing.Size(164, 22);
             this.TS_ListeCommande.Text = "Liste Commande";
+            this.TS_ListeCommande.Click += new System.EventHandler(this.TS_ListeCommande_Click);
             // 
             // TS_Gerer
             // 
@@ -141,13 +144,13 @@
             // TS_AjouterCommande
             // 
             this.TS_AjouterCommande.Name = "TS_AjouterCommande";
-            this.TS_AjouterCommande.Size = new System.Drawing.Size(152, 22);
+            this.TS_AjouterCommande.Size = new System.Drawing.Size(129, 22);
             this.TS_AjouterCommande.Text = "Ajouter";
             // 
             // TS_SupprimerCommande
             // 
             this.TS_SupprimerCommande.Name = "TS_SupprimerCommande";
-            this.TS_SupprimerCommande.Size = new System.Drawing.Size(152, 22);
+            this.TS_SupprimerCommande.Size = new System.Drawing.Size(129, 22);
             this.TS_SupprimerCommande.Text = "Supprimer";
             // 
             // TS_Article
@@ -162,13 +165,13 @@
             // TS_AjouterArticle
             // 
             this.TS_AjouterArticle.Name = "TS_AjouterArticle";
-            this.TS_AjouterArticle.Size = new System.Drawing.Size(152, 22);
+            this.TS_AjouterArticle.Size = new System.Drawing.Size(129, 22);
             this.TS_AjouterArticle.Text = "Ajouter";
             // 
             // MS_SupprimerArticle
             // 
             this.MS_SupprimerArticle.Name = "MS_SupprimerArticle";
-            this.MS_SupprimerArticle.Size = new System.Drawing.Size(152, 22);
+            this.MS_SupprimerArticle.Size = new System.Drawing.Size(129, 22);
             this.MS_SupprimerArticle.Text = "Supprimer";
             // 
             // TS_AugmenterPrix
