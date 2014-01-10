@@ -49,6 +49,7 @@
             this.lvcdes.Size = new System.Drawing.Size(658, 374);
             this.lvcdes.TabIndex = 0;
             this.lvcdes.UseCompatibleStateImageBehavior = false;
+            this.lvcdes.SelectedIndexChanged += new System.EventHandler(this.lvcdes_SelectedIndexChanged);
             // 
             // label1
             // 
