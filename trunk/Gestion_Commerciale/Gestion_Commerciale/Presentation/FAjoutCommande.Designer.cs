@@ -38,7 +38,7 @@
             this.BT_Annuler = new System.Windows.Forms.Button();
             this.DTP_DateCde = new System.Windows.Forms.DateTimePicker();
             this.CB_ListeClients = new System.Windows.Forms.ComboBox();
-            this.CB_ListeVendeur = new System.Windows.Forms.ComboBox();
+            this.CB_ListeVendeurs = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -102,6 +102,7 @@
             this.BT_Inserer.TabIndex = 3;
             this.BT_Inserer.Text = "Insérer";
             this.BT_Inserer.UseVisualStyleBackColor = true;
+            this.BT_Inserer.Click += new System.EventHandler(this.BT_Inserer_Click);
             // 
             // BT_Annuler
             // 
@@ -111,6 +112,7 @@
             this.BT_Annuler.TabIndex = 4;
             this.BT_Annuler.Text = "Annuler";
             this.BT_Annuler.UseVisualStyleBackColor = true;
+            this.BT_Annuler.Click += new System.EventHandler(this.BT_Annuler_Click);
             // 
             // DTP_DateCde
             // 
@@ -127,20 +129,20 @@
             this.CB_ListeClients.Size = new System.Drawing.Size(198, 21);
             this.CB_ListeClients.TabIndex = 6;
             // 
-            // CB_ListeVendeur
+            // CB_ListeVendeurs
             // 
-            this.CB_ListeVendeur.FormattingEnabled = true;
-            this.CB_ListeVendeur.Location = new System.Drawing.Point(165, 175);
-            this.CB_ListeVendeur.Name = "CB_ListeVendeur";
-            this.CB_ListeVendeur.Size = new System.Drawing.Size(198, 21);
-            this.CB_ListeVendeur.TabIndex = 6;
+            this.CB_ListeVendeurs.FormattingEnabled = true;
+            this.CB_ListeVendeurs.Location = new System.Drawing.Point(165, 175);
+            this.CB_ListeVendeurs.Name = "CB_ListeVendeurs";
+            this.CB_ListeVendeurs.Size = new System.Drawing.Size(198, 21);
+            this.CB_ListeVendeurs.TabIndex = 6;
             // 
             // FAjoutCommande
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 265);
-            this.Controls.Add(this.CB_ListeVendeur);
+            this.Controls.Add(this.CB_ListeVendeurs);
             this.Controls.Add(this.CB_ListeClients);
             this.Controls.Add(this.DTP_DateCde);
             this.Controls.Add(this.BT_Annuler);
@@ -170,6 +172,6 @@
         private System.Windows.Forms.Button BT_Annuler;
         private System.Windows.Forms.DateTimePicker DTP_DateCde;
         private System.Windows.Forms.ComboBox CB_ListeClients;
-        private System.Windows.Forms.ComboBox CB_ListeVendeur;
+        private System.Windows.Forms.ComboBox CB_ListeVendeurs;
     }
 }

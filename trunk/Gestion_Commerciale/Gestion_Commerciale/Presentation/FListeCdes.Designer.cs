@@ -117,6 +117,7 @@
             this.BT_Ajouter.TabIndex = 4;
             this.BT_Ajouter.Text = "Ajouter Commande";
             this.BT_Ajouter.UseVisualStyleBackColor = true;
+            this.BT_Ajouter.Click += new System.EventHandler(this.BT_Ajouter_Click);
             // 
             // BT_Modifier
             // 

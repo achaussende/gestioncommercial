@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Utilitaires
 {
-    class Fonction
+    public class Fonction
     {
                 /// <summary>
         /// Convertir une chaine date de mysql en datetime

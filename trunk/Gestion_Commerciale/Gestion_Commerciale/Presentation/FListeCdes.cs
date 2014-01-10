@@ -76,5 +76,12 @@ namespace Gestion_Commerciale.Presentation
             AfficherListe();
         }
 
+        private void BT_Ajouter_Click(object sender, EventArgs e)
+        {
+            FAjoutCommande fac;
+            fac = new FAjoutCommande();
+            fac.ShowDialog();
+        }
+
     }
 }

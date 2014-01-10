@@ -5,6 +5,7 @@ using System.Text;
 using System.Data;
 using Persistance;
 using MesErreurs;
+using Utilitaires;
 
 using MySql.Data.MySqlClient;
 
@@ -90,5 +91,34 @@ namespace Metier
                 throw erreur;
             }
         }
+
+        public void insertCommandes()
+        {
+            String date_cde;
+            String mysql;
+            sErreurs er = new sErreurs("Erreur lors de l'insertion de la commande", 
+                "Error Commandes.insertCommandes()");
+
+            try
+            {
+                date_cde = Fonction.DateToString(this.date_cde);
+               
+                mysql = "INSERT INTO COMMERCIAL.COMMANDES (NO_COMMAND,NO_VENDEUR,NO_CLIENT,DATE_CDE,FACTURE) VALUES ";
+                mysql += "('no_commande','no_vendeur','no_client','date_commande','facture')";
+                mysql = mysql.Replace("no_commande", no_command);
+                mysql = mysql.Replace("no_vendeur", no_vendeur);
+                mysql = mysql.Replace("no_client", no_client);
+                mysql = mysql.Replace("date_commande", date_cde);
+                mysql = mysql.Replace("facture", facture);
+                
+                DbInterface.Ecriture(mysql, er);
+            }
+            catch (MySqlException e)
+            {
+                throw new MonException(er.MessageUtilisateur(), er.MessageApplication(),
+                e.Message);
+            }
+        }
+
     }
 }
