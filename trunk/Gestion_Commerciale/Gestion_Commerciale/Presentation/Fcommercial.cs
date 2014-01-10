@@ -92,5 +92,12 @@ namespace Gestion_Commerciale
             fac.ShowDialog();
         }
 
+        private void TSM_Modifier_Click(object sender, EventArgs e)
+        {
+            FModifCde fmc;
+            fmc = new FModifCde();
+            fmc.ShowDialog();
+        }
+
     }
 }
