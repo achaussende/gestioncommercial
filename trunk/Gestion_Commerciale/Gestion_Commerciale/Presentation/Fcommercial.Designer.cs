@@ -144,13 +144,14 @@
             // TS_AjouterCommande
             // 
             this.TS_AjouterCommande.Name = "TS_AjouterCommande";
-            this.TS_AjouterCommande.Size = new System.Drawing.Size(129, 22);
+            this.TS_AjouterCommande.Size = new System.Drawing.Size(152, 22);
             this.TS_AjouterCommande.Text = "Ajouter";
+            this.TS_AjouterCommande.Click += new System.EventHandler(this.TS_AjouterCommande_Click);
             // 
             // TS_SupprimerCommande
             // 
             this.TS_SupprimerCommande.Name = "TS_SupprimerCommande";
-            this.TS_SupprimerCommande.Size = new System.Drawing.Size(129, 22);
+            this.TS_SupprimerCommande.Size = new System.Drawing.Size(152, 22);
             this.TS_SupprimerCommande.Text = "Supprimer";
             // 
             // TS_Article

@@ -85,5 +85,12 @@ namespace Gestion_Commerciale
             fv.ShowDialog();
         }
 
+        private void TS_AjouterCommande_Click(object sender, EventArgs e)
+        {
+            FAjoutCommande fac;
+            fac = new FAjoutCommande();
+            fac.ShowDialog();
+        }
+
     }
 }
