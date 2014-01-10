@@ -90,5 +90,10 @@ namespace Gestion_Commerciale.Presentation
             fmc.ShowDialog();
         }
 
+        private void lvcdes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
