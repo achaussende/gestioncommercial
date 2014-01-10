@@ -33,7 +33,7 @@ namespace Metier
             set { qte_cde = value; }
         }
 
-        public Detail_Cde(int hashCode, String no_command, String no_article, String qte_cde, String livree)
+        public Detail_Cde(String no_command, String no_article, String qte_cde, String livree)
         {
             this.no_command = no_command;
             this.no_article = no_article;

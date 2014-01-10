@@ -83,5 +83,12 @@ namespace Gestion_Commerciale.Presentation
             fac.ShowDialog();
         }
 
+        private void BT_Modifier_Click(object sender, EventArgs e)
+        {
+            FModifCde fmc;
+            fmc = new FModifCde();
+            fmc.ShowDialog();
+        }
+
     }
 }

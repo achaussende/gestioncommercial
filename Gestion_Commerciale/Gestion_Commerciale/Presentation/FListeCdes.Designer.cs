@@ -127,6 +127,7 @@
             this.BT_Modifier.TabIndex = 4;
             this.BT_Modifier.Text = "Modifier Commande";
             this.BT_Modifier.UseVisualStyleBackColor = true;
+            this.BT_Modifier.Click += new System.EventHandler(this.BT_Modifier_Click);
             // 
             // BT_Supprimer
             // 

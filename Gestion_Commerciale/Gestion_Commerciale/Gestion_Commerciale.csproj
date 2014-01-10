@@ -72,6 +72,12 @@
     <Compile Include="Presentation\FListeCdes.Designer.cs">
       <DependentUpon>FListeCdes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\FModifCde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FModifCde.Designer.cs">
+      <DependentUpon>FModifCde.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\FVendeur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FListeCdes.resx">
       <DependentUpon>FListeCdes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FModifCde.resx">
+      <DependentUpon>FModifCde.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FVendeur.resx">
       <DependentUpon>FVendeur.cs</DependentUpon>
