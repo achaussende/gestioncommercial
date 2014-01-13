@@ -11,7 +11,6 @@ namespace Metier
         private String no_article;
         private String qte_cde;
         private String livree;
-
         public String Livree
         {
             get { return livree; }
@@ -43,5 +42,11 @@ namespace Metier
 
         public Detail_Cde()
         { }
+
+        /*public Detail_Cde recupererDetailCde(String no_command)
+        {
+            Detail_Cde detail_cde;
+
+        }*/
     }
 }

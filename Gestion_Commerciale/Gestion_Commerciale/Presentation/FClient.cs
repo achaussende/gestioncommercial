@@ -21,17 +21,12 @@ namespace Gestion_Commerciale
         {
             InitializeComponent();
 
-            List<String> mesNumeros;
             try
             {
                 Clientel unClient = new Clientel();
-                // Lecture classique
+
                 CB_ListeClients.DataSource = unClient.LectureNoClient();
 
-                mesNumeros = unClient.LectureNoClient();
-
-                // Lecture à partir d’un data source
-                CB_ListeClients.DataSource = unClient.LectureNoClient();
             }
             catch (MonException exception)
             {

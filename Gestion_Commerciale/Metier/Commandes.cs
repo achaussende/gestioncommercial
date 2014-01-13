@@ -24,7 +24,6 @@ namespace Metier
             get { return no_command; }
             set { no_command = value; }
         }
-
         public DateTime Date_cde
         {
             get { return date_cde; }
@@ -92,6 +91,36 @@ namespace Metier
             }
         }
 
+        /// <summary>
+        /// Lis tous les numéros de commandes existants dans la base de données
+        /// </summary>
+        /// <returns>Une liste de chaînes de caractères des numéros de commandes</returns>
+        public List<String> LectureNoCommandes()
+        {
+            List<String> mesNumeros = new List<String>();
+            DataTable dt;
+            sErreurs er = new sErreurs("Erreur sur lecture de la commande.",
+            "Commandes.LectureNoCommandes()");
+            try
+            {
+                String mysql = "SELECT DISTINCT NO_COMMAND FROM COMMANDES ORDER BY NO_COMMAND";
+                dt = DbInterface.Lecture(mysql, er);
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    mesNumeros.Add((dataRow[0]).ToString());
+                }
+                return mesNumeros;
+            }
+            catch (MonException e)
+            {
+                throw new MonException(er.MessageUtilisateur(), er.MessageApplication(),
+                e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Insère la commande dont les informations ont été rentrés dans les champs de l'interface
+        /// </summary>
         public void insertCommandes()
         {
             String date_cde;
@@ -113,6 +142,45 @@ namespace Metier
                 
                 DbInterface.Ecriture(mysql, er);
             }
+            catch (MonException e)
+            {
+                throw new MonException(er.MessageUtilisateur(), er.MessageApplication(),
+                e.Message);
+            }
+        }
+
+        /// <summary>
+        /// Recherche une commande en fonction de son numéro
+        /// </summary>
+        /// <param name="numCde">Numero de la commande à chercher</param>
+        /// <returns>La commande qui porte le numéro numCde</returns>
+        public Commandes RechercheUneCommande(String numCde)
+        {
+            String mysql;
+            DataTable dt;
+            sErreurs er = new sErreurs("Erreur sur recherche d'une commande.",
+            "Commandes.RechercheUneCommande");
+            try
+            {
+                mysql = "SELECT NO_COMMAND, DATE_CDE, NO_VENDEUR, NO_CLIENT, FACTURE";
+                mysql += " FROM COMMANDES WHERE NO_COMMAND = 'numero' ";
+                // On se protège de l’injection sql
+                mysql = mysql.Replace("numero", numCde);
+                // On appelle la couche Persistance
+                dt = DbInterface.Lecture(mysql, er);
+                if (dt.IsInitialized)
+                {
+                    DataRow dataRow = dt.Rows[0];
+                    this.no_command = numCde;
+                    this.date_cde = Fonction.StringToDate(dataRow[1].ToString());
+                    this.no_vendeur = dataRow[2].ToString();
+                    this.no_client = dataRow[3].ToString();
+                    this.facture = dataRow[4].ToString();
+                    return this;
+                }
+                else
+                    return null;
+            }
             catch (MySqlException e)
             {
                 throw new MonException(er.MessageUtilisateur(), er.MessageApplication(),
@@ -120,5 +188,28 @@ namespace Metier
             }
         }
 
+        /// <summary>
+        /// Supprime la commande identifiée par son numéro
+        /// </summary>
+        /// <param name="numCde">Numéro de la commande à supprimer</param>
+        public void SupprimerUneCommande(String numCde)
+        {
+            String mysql;
+            sErreurs er = new sErreurs("Erreur sur la suppression de la commande", 
+                "Commandes.SupprimerUneCommande");
+            try
+            {
+                mysql = "DELETE FROM COMMANDES";
+                mysql += " WHERE commandes.NO_COMMAND = 'numero'";
+                mysql = mysql.Replace("numero", numCde);
+
+                DbInterface.Ecriture(mysql, er);
+            }
+            catch (MonException e)
+            {
+                throw new MonException(er.MessageUtilisateur(), er.MessageApplication(),e.Message);
+            }
+ 
+        }
     }
 }
