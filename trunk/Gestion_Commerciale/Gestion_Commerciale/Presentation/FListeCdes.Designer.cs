@@ -45,10 +45,13 @@
             // lvcdes
             // 
             this.lvcdes.Location = new System.Drawing.Point(12, 38);
+            this.lvcdes.MultiSelect = false;
             this.lvcdes.Name = "lvcdes";
             this.lvcdes.Size = new System.Drawing.Size(658, 374);
             this.lvcdes.TabIndex = 0;
             this.lvcdes.UseCompatibleStateImageBehavior = false;
+            this.lvcdes.Visible = false;
+            this.lvcdes.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.lvcdes_ItemSelectionChanged);
             this.lvcdes.SelectedIndexChanged += new System.EventHandler(this.lvcdes_SelectedIndexChanged);
             // 
             // label1
@@ -138,6 +141,7 @@
             this.BT_Supprimer.TabIndex = 4;
             this.BT_Supprimer.Text = "Supprimer Commande";
             this.BT_Supprimer.UseVisualStyleBackColor = true;
+            this.BT_Supprimer.Click += new System.EventHandler(this.BT_Supprimer_Click);
             // 
             // BT_Details
             // 

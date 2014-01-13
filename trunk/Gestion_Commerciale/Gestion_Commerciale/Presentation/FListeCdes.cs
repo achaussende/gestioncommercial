@@ -14,6 +14,8 @@ namespace Gestion_Commerciale.Presentation
 {
     public partial class FListeCdes : Form
     {
+        private String cde_select;
+
         public FListeCdes()
         {
             InitializeComponent();
@@ -26,9 +28,12 @@ namespace Gestion_Commerciale.Presentation
             lvcdes.Columns.Add("Numéro Client", 100, HorizontalAlignment.Left);
             lvcdes.Columns.Add("Date Commande", 100, HorizontalAlignment.Left);
             lvcdes.Columns.Add("Facture", 100, HorizontalAlignment.Left);
+            lvcdes.FullRowSelect = true;
         }
 
-
+        /// <summary>
+        /// Affiche la liste de commandes dans la ListView en fonction des Checkboxes
+        /// </summary>
         private void AfficherListe()
         {
             Commandes unecommande = new Commandes();
@@ -63,6 +68,17 @@ namespace Gestion_Commerciale.Presentation
                 if (!CB_NumeroClient.Checked) lvcdes.Columns.RemoveByKey("3");
                 if (!CB_DateCommande.Checked) lvcdes.Columns.RemoveByKey("4");
                 if (!CB_Facture.Checked) lvcdes.Columns.RemoveByKey("5");
+                if (!CB_Numero.Checked && !CB_NumeroVendeur.Checked && !CB_NumeroClient.Checked && !CB_DateCommande.Checked &&
+                    !CB_Facture.Checked && !CB_Facture.Checked)
+                {
+                    DialogResult check_incorrect;
+                    lvcdes.Visible = false;
+                    check_incorrect = MessageBox.Show("Vous devez cocher un attribut de commande à afficher, au moins.", "Impossibilté d'afficher la liste", MessageBoxButtons.OK);                        
+                }
+                else
+                {
+                    lvcdes.Visible = true;
+                }
                 lvcdes.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             }
             catch (MonException erreur)
@@ -81,18 +97,51 @@ namespace Gestion_Commerciale.Presentation
             FAjoutCommande fac;
             fac = new FAjoutCommande();
             fac.ShowDialog();
+            AfficherListe();
         }
 
         private void BT_Modifier_Click(object sender, EventArgs e)
         {
             FModifCde fmc;
-            fmc = new FModifCde();
-            fmc.ShowDialog();
+
+            if (this.cde_select == null)
+            {
+                DialogResult selectionner_cde;
+                selectionner_cde = MessageBox.Show("Selectionner une commande à modifier", "Commande non-selectionnée", MessageBoxButtons.OK);
+            }
+            else
+            {
+                fmc = new FModifCde(cde_select);
+                fmc.ShowDialog();
+                AfficherListe();
+            }
+
         }
 
         private void lvcdes_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lvcdes_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            this.cde_select = e.Item.Text;
+        }
+
+        private void BT_Supprimer_Click(object sender, EventArgs e)
+        {
+            FSupprCde fsc;
+            if (this.cde_select == null)
+            {
+                DialogResult selectionner_cde;
+                selectionner_cde = MessageBox.Show("Selectionner une commande à supprimer", "Commande non-selectionnée", MessageBoxButtons.OK);
+            }
+            else
+            {
+                fsc = new FSupprCde(cde_select);
+                fsc.ShowDialog();
+                AfficherListe();
+            }
         }
 
     }

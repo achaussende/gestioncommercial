@@ -39,7 +39,7 @@
             this.CB_ListeClients = new System.Windows.Forms.ComboBox();
             this.DTP_DateCde = new System.Windows.Forms.DateTimePicker();
             this.RB_FactureTrue = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.RB_FactureFalse = new System.Windows.Forms.RadioButton();
             this.BT_Modifier = new System.Windows.Forms.Button();
             this.BT_Annuler = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -139,17 +139,19 @@
             this.RB_FactureTrue.TabStop = true;
             this.RB_FactureTrue.Text = "Oui";
             this.RB_FactureTrue.UseVisualStyleBackColor = true;
+            this.RB_FactureTrue.CheckedChanged += new System.EventHandler(this.RB_FactureTrue_CheckedChanged);
             // 
-            // radioButton2
+            // RB_FactureFalse
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(243, 181);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(45, 17);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Non";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RB_FactureFalse.AutoSize = true;
+            this.RB_FactureFalse.Location = new System.Drawing.Point(243, 181);
+            this.RB_FactureFalse.Name = "RB_FactureFalse";
+            this.RB_FactureFalse.Size = new System.Drawing.Size(45, 17);
+            this.RB_FactureFalse.TabIndex = 6;
+            this.RB_FactureFalse.TabStop = true;
+            this.RB_FactureFalse.Text = "Non";
+            this.RB_FactureFalse.UseVisualStyleBackColor = true;
+            this.RB_FactureFalse.CheckedChanged += new System.EventHandler(this.RB_FactureFalse_CheckedChanged);
             // 
             // BT_Modifier
             // 
@@ -159,6 +161,7 @@
             this.BT_Modifier.TabIndex = 7;
             this.BT_Modifier.Text = "Modifier";
             this.BT_Modifier.UseVisualStyleBackColor = true;
+            this.BT_Modifier.Click += new System.EventHandler(this.BT_Modifier_Click);
             // 
             // BT_Annuler
             // 
@@ -177,7 +180,7 @@
             this.ClientSize = new System.Drawing.Size(385, 262);
             this.Controls.Add(this.BT_Annuler);
             this.Controls.Add(this.BT_Modifier);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.RB_FactureFalse);
             this.Controls.Add(this.RB_FactureTrue);
             this.Controls.Add(this.DTP_DateCde);
             this.Controls.Add(this.CB_ListeClients);
@@ -209,7 +212,7 @@
         private System.Windows.Forms.ComboBox CB_ListeClients;
         private System.Windows.Forms.DateTimePicker DTP_DateCde;
         private System.Windows.Forms.RadioButton RB_FactureTrue;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton RB_FactureFalse;
         private System.Windows.Forms.Button BT_Modifier;
         private System.Windows.Forms.Button BT_Annuler;
     }
