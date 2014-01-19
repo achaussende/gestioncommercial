@@ -54,6 +54,12 @@
     <Compile Include="Presentation\FAjoutCommande.Designer.cs">
       <DependentUpon>FAjoutCommande.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\FAugmentationPrix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FAugmentationPrix.Designer.cs">
+      <DependentUpon>FAugmentationPrix.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\FClient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     </Compile>
     <Compile Include="Presentation\Fcommercial.Designer.cs">
       <DependentUpon>Fcommercial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\FProduitsCde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FProduitsCde.Designer.cs">
+      <DependentUpon>FProduitsCde.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation\FListeCdes.cs">
       <SubType>Form</SubType>
@@ -95,11 +107,17 @@
     <EmbeddedResource Include="Presentation\FAjoutCommande.resx">
       <DependentUpon>FAjoutCommande.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FAugmentationPrix.resx">
+      <DependentUpon>FAugmentationPrix.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FClient.resx">
       <DependentUpon>FClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\Fcommercial.resx">
       <DependentUpon>Fcommercial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FProduitsCde.resx">
+      <DependentUpon>FProduitsCde.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FListeCdes.resx">
       <DependentUpon>FListeCdes.cs</DependentUpon>

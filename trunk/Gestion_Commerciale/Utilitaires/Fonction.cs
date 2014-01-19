@@ -35,6 +35,19 @@ namespace Utilitaires
             retour += dt.Second;
             return retour;
         }
+
+        /// <summary>
+        /// Vérifier si une chaîne de caractères correspond à un entier positif
+        /// </summary>
+        /// <param name="text">Nombre sous forme de chaînes de caractère</param>
+        /// <returns></returns>
+        public static bool IsPositiveDouble(string text)
+        {
+            double value;
+            value = double.Parse(text);
+            return value >= 0;
+       
+        }
         
     }
 }
