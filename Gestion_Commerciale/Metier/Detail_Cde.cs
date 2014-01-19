@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
+using MesErreurs;
+using Persistance;
+using MySql.Data.MySqlClient;
 
 namespace Metier
 {
@@ -11,6 +15,7 @@ namespace Metier
         private String no_article;
         private String qte_cde;
         private String livree;
+
         public String Livree
         {
             get { return livree; }
@@ -43,10 +48,41 @@ namespace Metier
         public Detail_Cde()
         { }
 
-        /*public Detail_Cde recupererDetailCde(String no_command)
+        /// <summary>
+        /// Récupère tous les détails de commande identifiée par son numéro
+        /// </summary>
+        /// <param name="no_command">Numéro de la commande dont on doit récupérer les détails</param>
+        /// <returns>Liste de Detail_Cde</returns>
+        public List<Detail_Cde> recupererDetailCde(String no_command)
         {
             Detail_Cde detail_cde;
+            String mysql;
+            DataTable dt;
+            sErreurs er = new sErreurs("Erreurs sur la récupération des détails de la commande",
+                "Detail_Cde.recupererDetailCde");
+            Connexion uneconnexion = Connexion.getInstance();
+            MySqlConnection cnx = uneconnexion.getConnexion();
+            mysql = "SELECT NO_COMMAND, NO_ARTICLE, QTE_CDEE, LIVREE ";
+            mysql += "FROM DETAIL_CDE WHERE NO_COMMAND = ':numero' ";
+            mysql = mysql.Replace(":numero", no_command);
 
-        }*/
+            try
+            {
+                dt = DbInterface.Lecture(mysql, er);
+                List<Detail_Cde> mesDetailsCde = new List<Detail_Cde>();
+
+                foreach (DataRow dataRow in dt.Rows)
+                {
+                    detail_cde = new Detail_Cde(dataRow[0].ToString(), dataRow[1].ToString(),
+                        dataRow[2].ToString(), dataRow[3].ToString());
+                    mesDetailsCde.Add(detail_cde);
+                }
+                return mesDetailsCde;
+            }
+            catch (MonException erreur)
+            {
+                throw erreur;
+            }
+        }
     }
 }

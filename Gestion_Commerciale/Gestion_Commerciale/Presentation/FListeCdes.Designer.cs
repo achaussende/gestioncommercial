@@ -40,6 +40,7 @@
             this.BT_Supprimer = new System.Windows.Forms.Button();
             this.BT_Details = new System.Windows.Forms.Button();
             this.BT_AfficherListe = new System.Windows.Forms.Button();
+            this.BT_AugmentationPrix = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lvcdes
@@ -151,6 +152,7 @@
             this.BT_Details.TabIndex = 5;
             this.BT_Details.Text = "Détails Commande";
             this.BT_Details.UseVisualStyleBackColor = true;
+            this.BT_Details.Click += new System.EventHandler(this.BT_Details_Click);
             // 
             // BT_AfficherListe
             // 
@@ -162,11 +164,22 @@
             this.BT_AfficherListe.UseVisualStyleBackColor = true;
             this.BT_AfficherListe.Click += new System.EventHandler(this.BT_AfficherListe_Click);
             // 
+            // BT_AugmentationPrix
+            // 
+            this.BT_AugmentationPrix.Location = new System.Drawing.Point(563, 418);
+            this.BT_AugmentationPrix.Name = "BT_AugmentationPrix";
+            this.BT_AugmentationPrix.Size = new System.Drawing.Size(107, 23);
+            this.BT_AugmentationPrix.TabIndex = 7;
+            this.BT_AugmentationPrix.Text = "Augmenter les prix";
+            this.BT_AugmentationPrix.UseVisualStyleBackColor = true;
+            this.BT_AugmentationPrix.Click += new System.EventHandler(this.BT_AugmentationPrix_Click);
+            // 
             // FListeCdes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(682, 445);
+            this.Controls.Add(this.BT_AugmentationPrix);
             this.Controls.Add(this.BT_AfficherListe);
             this.Controls.Add(this.BT_Details);
             this.Controls.Add(this.BT_Supprimer);
@@ -200,5 +213,6 @@
         private System.Windows.Forms.Button BT_Supprimer;
         private System.Windows.Forms.Button BT_Details;
         private System.Windows.Forms.Button BT_AfficherListe;
+        private System.Windows.Forms.Button BT_AugmentationPrix;
     }
 }

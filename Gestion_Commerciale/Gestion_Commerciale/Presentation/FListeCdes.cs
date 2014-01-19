@@ -144,5 +144,27 @@ namespace Gestion_Commerciale.Presentation
             }
         }
 
+        private void BT_Details_Click(object sender, EventArgs e)
+        {
+            if (this.cde_select == null)
+            {
+                DialogResult selectionner_cde;
+                selectionner_cde = MessageBox.Show("Selectionner une commande pour en voir les détails", 
+                    "Commande non-selectionnée", MessageBoxButtons.OK);
+            }
+            else
+            {
+                FProduitsCde fdc = new FProduitsCde(cde_select);
+                fdc.Show();
+            }
+        }
+
+        private void BT_AugmentationPrix_Click(object sender, EventArgs e)
+        {
+            FAugmentationPrix fap = new FAugmentationPrix();
+            fap.Show();
+        }
+
     }
 }
+ 

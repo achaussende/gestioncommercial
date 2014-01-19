@@ -57,11 +57,11 @@ namespace Gestion_Commerciale.Presentation
             String facture;
             if(RB_FactureTrue.Checked == true)
             {
-                facture = "F";
+                facture = "V";
             }
             else
             {
-                facture = "NaN";
+                facture = "F";
             }
 
             Commandes cde_modif = new Commandes(TB_NumeroCde.Text, DTP_DateCde.Value,
