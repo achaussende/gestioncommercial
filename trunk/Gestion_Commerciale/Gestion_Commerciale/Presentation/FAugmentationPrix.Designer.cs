@@ -50,7 +50,6 @@
             this.label3.Size = new System.Drawing.Size(69, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "Multiplicateur";
-            this.label3.Visible = false;
             // 
             // label1
             // 

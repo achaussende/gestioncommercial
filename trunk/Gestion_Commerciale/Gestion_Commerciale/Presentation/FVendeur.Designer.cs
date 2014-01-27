@@ -31,7 +31,6 @@
             this.Tlabel_infos = new System.Windows.Forms.Label();
             this.Bt_Fermer = new System.Windows.Forms.Button();
             this.Bt_Interroger = new System.Windows.Forms.Button();
-            this.Bt_Details = new System.Windows.Forms.Button();
             this.CB_ListeVendeurs = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -81,15 +80,6 @@
             this.Bt_Interroger.Text = "Interroger";
             this.Bt_Interroger.UseVisualStyleBackColor = true;
             this.Bt_Interroger.Click += new System.EventHandler(this.Bt_Interroger_Click);
-            // 
-            // Bt_Details
-            // 
-            this.Bt_Details.Location = new System.Drawing.Point(491, 223);
-            this.Bt_Details.Name = "Bt_Details";
-            this.Bt_Details.Size = new System.Drawing.Size(75, 23);
-            this.Bt_Details.TabIndex = 9;
-            this.Bt_Details.Text = "Détails";
-            this.Bt_Details.UseVisualStyleBackColor = true;
             // 
             // CB_ListeVendeurs
             // 
@@ -250,7 +240,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CB_ListeVendeurs);
-            this.Controls.Add(this.Bt_Details);
             this.Controls.Add(this.Bt_Interroger);
             this.Controls.Add(this.Bt_Fermer);
             this.Controls.Add(this.Tlabel_infos);
@@ -266,7 +255,6 @@
         private System.Windows.Forms.Label Tlabel_infos;
         private System.Windows.Forms.Button Bt_Fermer;
         private System.Windows.Forms.Button Bt_Interroger;
-        private System.Windows.Forms.Button Bt_Details;
         private System.Windows.Forms.ComboBox CB_ListeVendeurs;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;

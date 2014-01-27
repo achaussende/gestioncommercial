@@ -35,7 +35,7 @@ namespace Persistance
             }
             catch (MySqlException err)
             {
-                throw new MonException("", "Erreur d'acces à la base de Gestion des frais",
+                throw new MonException("", "Erreur d'acces à la base de données Commercial",
                 err.Message);
             }
         }

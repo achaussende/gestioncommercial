@@ -38,7 +38,7 @@ namespace Gestion_Commerciale.Presentation
         public FSupprCde(String no_cde)
         {
             InitializeComponent();
-
+            // Charge la liste de commandes disponibles à la suppression
             try
             {
                 Commandes uneCde = new Commandes();
@@ -50,6 +50,7 @@ namespace Gestion_Commerciale.Presentation
                 MessageBox.Show(exception.MessageApplication(), exception.Message);
             }
             
+            // Charge les détails de la commande
             Commandes uneCommande = new Commandes();
             Commandes uneCdecherche;
             try
@@ -105,6 +106,25 @@ namespace Gestion_Commerciale.Presentation
         private void BT_Annuler_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void CB_ListeCdes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Commandes uneCommande = new Commandes();
+            Commandes uneCdecherche;
+            try
+            {
+                string no_cde = CB_ListeCdes.Text;
+                uneCdecherche = uneCommande.RechercheUneCommande(no_cde);
+                LB_NoVendeur.Text = uneCdecherche.No_vendeur;
+                LB_NoClient.Text = uneCdecherche.No_client;
+                LB_Facture.Text = uneCdecherche.Facture;
+                LB_DateCommande.Text = Fonction.DateToString(uneCdecherche.Date_cde);
+            }
+            catch (MonException exception)
+            {
+                MessageBox.Show(exception.MessageApplication(), exception.Message);
+            }
         }
     }
 }

@@ -2,24 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Persistance;
 using MySql.Data.MySqlClient;
+using Utilitaires;
 using MesErreurs;
+using Persistance;
 
 namespace Metier
 {
     public class FermetureApplication
     {
-        /// <summary>
-        /// Tentative de connexion à la base
-        /// </summary>
-        /// <returns></returns>
         static public bool getFermeture()
         {
             try
             {
-                //A revérifer
-                Connexion macnx = Connexion.getInstance();
+                Connexion.closeConnexion();
                 return true;
             }
             catch (MonException excep)

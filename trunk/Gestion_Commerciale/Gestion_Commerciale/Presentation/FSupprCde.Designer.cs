@@ -161,6 +161,7 @@
             this.CB_ListeCdes.Name = "CB_ListeCdes";
             this.CB_ListeCdes.Size = new System.Drawing.Size(185, 21);
             this.CB_ListeCdes.TabIndex = 25;
+            this.CB_ListeCdes.SelectedIndexChanged += new System.EventHandler(this.CB_ListeCdes_SelectedIndexChanged);
             // 
             // FSupprCde
             // 

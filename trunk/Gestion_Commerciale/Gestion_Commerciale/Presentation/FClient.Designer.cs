@@ -44,7 +44,6 @@
             this.LB_NOM = new System.Windows.Forms.Label();
             this.LB_ADRESSE = new System.Windows.Forms.Label();
             this.LB_CODEPOSTAL = new System.Windows.Forms.Label();
-            this.Bt_Details = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.LB_NOCLIENT = new System.Windows.Forms.Label();
             this.Bt_Fermer = new System.Windows.Forms.Button();
@@ -192,15 +191,6 @@
             this.LB_CODEPOSTAL.Size = new System.Drawing.Size(0, 13);
             this.LB_CODEPOSTAL.TabIndex = 7;
             // 
-            // Bt_Details
-            // 
-            this.Bt_Details.Location = new System.Drawing.Point(491, 223);
-            this.Bt_Details.Name = "Bt_Details";
-            this.Bt_Details.Size = new System.Drawing.Size(75, 23);
-            this.Bt_Details.TabIndex = 8;
-            this.Bt_Details.Text = "Détails";
-            this.Bt_Details.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -236,7 +226,6 @@
             this.ClientSize = new System.Drawing.Size(645, 273);
             this.Controls.Add(this.LB_NOCLIENT);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.Bt_Details);
             this.Controls.Add(this.LB_CODEPOSTAL);
             this.Controls.Add(this.LB_ADRESSE);
             this.Controls.Add(this.LB_VILLE);
@@ -279,7 +268,6 @@
         private System.Windows.Forms.Label LB_NOM;
         private System.Windows.Forms.Label LB_ADRESSE;
         private System.Windows.Forms.Label LB_CODEPOSTAL;
-        private System.Windows.Forms.Button Bt_Details;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label LB_NOCLIENT;
         private System.Windows.Forms.Button Bt_Fermer;
