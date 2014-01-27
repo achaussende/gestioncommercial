@@ -99,5 +99,76 @@ namespace Gestion_Commerciale
             fmc.ShowDialog();
         }
 
+        private void TS_AugmenterPrix_Click(object sender, EventArgs e)
+        {
+            FAugmentationPrix fap = new FAugmentationPrix();
+            fap.Show();
+        }
+
+        private void TS_AjouterArticle_Click(object sender, EventArgs e)
+        {
+            FAjoutArt faa = new FAjoutArt();
+            faa.Show();
+        }
+
+        private void TS_Deconnexion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool rep = FermetureApplication.getFermeture();
+                if (rep)
+                {
+                    DialogResult dr = MessageBox.Show("Fermeture de la connexion réussie.", "Déconnexion réussie", MessageBoxButtons.OK);
+                    TS_Connexion.Enabled = true;
+                    TS_Deconnexion.Enabled = false;
+                    TS_Interroger.Enabled = false;
+                    TS_Gerer.Enabled = false;
+                    lbl_etat.Text = "Etat : hors ligne - Déconnecté";
+                    lbl_etat.ForeColor = Color.Red;
+                }
+            }
+            catch (MonException excep)
+            {
+                throw excep;
+            }
+        }
+
+        private void TS_Connexion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool rep;
+                // on connecte l'application à la base de données
+                rep = OuvertureApplication.getOuverture();
+                // si la connexion a réussie : on active les menus
+                if (rep)
+                {
+                    DialogResult dr = MessageBox.Show("Ouverture de la connexion réussie.", "Connexion réussie", MessageBoxButtons.OK);
+                    TS_Connexion.Enabled = false;
+                    TS_Deconnexion.Enabled = true;
+                    TS_Interroger.Enabled = true;
+                    TS_Gerer.Enabled = true;
+                    lbl_etat.Text = "Etat : en ligne";
+                    lbl_etat.ForeColor = Color.DarkGreen;
+                }
+            }
+            catch (MonException excep)
+            {
+                throw excep;
+            }
+        }
+
+        private void TS_SupprimerCommande_Click(object sender, EventArgs e)
+        {
+            FSupprCde fsc = new FSupprCde();
+            fsc.Show();
+        }
+
+        private void MS_SupprimerArticle_Click(object sender, EventArgs e)
+        {
+            FSupprArticle fsa = new FSupprArticle();
+            fsa.Show();
+        }
+
     }
 }

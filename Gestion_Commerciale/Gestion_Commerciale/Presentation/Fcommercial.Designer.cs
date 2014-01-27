@@ -77,12 +77,14 @@
             this.TS_Connexion.Name = "TS_Connexion";
             this.TS_Connexion.Size = new System.Drawing.Size(143, 22);
             this.TS_Connexion.Text = "Connexion";
+            this.TS_Connexion.Click += new System.EventHandler(this.TS_Connexion_Click);
             // 
             // TS_Deconnexion
             // 
             this.TS_Deconnexion.Name = "TS_Deconnexion";
             this.TS_Deconnexion.Size = new System.Drawing.Size(143, 22);
             this.TS_Deconnexion.Text = "Déconnexion";
+            this.TS_Deconnexion.Click += new System.EventHandler(this.TS_Deconnexion_Click);
             // 
             // TS_Quitter
             // 
@@ -144,15 +146,16 @@
             // TS_AjouterCommande
             // 
             this.TS_AjouterCommande.Name = "TS_AjouterCommande";
-            this.TS_AjouterCommande.Size = new System.Drawing.Size(152, 22);
+            this.TS_AjouterCommande.Size = new System.Drawing.Size(129, 22);
             this.TS_AjouterCommande.Text = "Ajouter";
             this.TS_AjouterCommande.Click += new System.EventHandler(this.TS_AjouterCommande_Click);
             // 
             // TS_SupprimerCommande
             // 
             this.TS_SupprimerCommande.Name = "TS_SupprimerCommande";
-            this.TS_SupprimerCommande.Size = new System.Drawing.Size(152, 22);
+            this.TS_SupprimerCommande.Size = new System.Drawing.Size(129, 22);
             this.TS_SupprimerCommande.Text = "Supprimer";
+            this.TS_SupprimerCommande.Click += new System.EventHandler(this.TS_SupprimerCommande_Click);
             // 
             // TS_Article
             // 
@@ -166,20 +169,23 @@
             // TS_AjouterArticle
             // 
             this.TS_AjouterArticle.Name = "TS_AjouterArticle";
-            this.TS_AjouterArticle.Size = new System.Drawing.Size(129, 22);
+            this.TS_AjouterArticle.Size = new System.Drawing.Size(152, 22);
             this.TS_AjouterArticle.Text = "Ajouter";
+            this.TS_AjouterArticle.Click += new System.EventHandler(this.TS_AjouterArticle_Click);
             // 
             // MS_SupprimerArticle
             // 
             this.MS_SupprimerArticle.Name = "MS_SupprimerArticle";
-            this.MS_SupprimerArticle.Size = new System.Drawing.Size(129, 22);
+            this.MS_SupprimerArticle.Size = new System.Drawing.Size(152, 22);
             this.MS_SupprimerArticle.Text = "Supprimer";
+            this.MS_SupprimerArticle.Click += new System.EventHandler(this.MS_SupprimerArticle_Click);
             // 
             // TS_AugmenterPrix
             // 
             this.TS_AugmenterPrix.Name = "TS_AugmenterPrix";
             this.TS_AugmenterPrix.Size = new System.Drawing.Size(173, 22);
             this.TS_AugmenterPrix.Text = "Augmenter les prix";
+            this.TS_AugmenterPrix.Click += new System.EventHandler(this.TS_AugmenterPrix_Click);
             // 
             // L_GestionCommerciale
             // 
@@ -239,9 +245,9 @@
         private System.Windows.Forms.ToolStripMenuItem MS_SupprimerArticle;
         private System.Windows.Forms.ToolStripMenuItem TS_AugmenterPrix;
         private System.Windows.Forms.Label L_GestionCommerciale;
+        private System.Windows.Forms.Label lbl_etat;
         private System.Windows.Forms.ToolStripMenuItem TS_Connexion;
         private System.Windows.Forms.ToolStripMenuItem TS_Deconnexion;
-        private System.Windows.Forms.Label lbl_etat;
 
     }
 }

@@ -17,14 +17,14 @@ namespace Metier
           static public bool getOuverture()
             {
                 try
-            {
-                MySqlConnection mysqlcnx = Connexion.getInstance().getConnexion();
-                return true;
-            }
-            catch (MonException excep)
-            {
-            throw excep;
-            }
+                {
+                    MySqlConnection mysqlcnx = Connexion.getInstance().getConnexion();
+                    return true;
+                }
+                catch (MonException excep)
+                {
+                    throw excep;
+                }
             }
     }
 }

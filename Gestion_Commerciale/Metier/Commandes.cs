@@ -211,5 +211,28 @@ namespace Metier
             }
  
         }
+
+        /// <summary>
+        /// Récupère le dernier numéro de commande ajoutée dans la base de données
+        /// </summary>
+        /// <returns>Dernière numéro de commande ajoutée dans la base de données</returns>
+        public static string maxNumeroCommande()
+        {
+            sErreurs er = new sErreurs("Erreur sur la récupération du dernier numéro de commande", "Commande.maxNumeroCommande()");
+            DataTable dt;
+            string mysql = "SELECT MAX(NO_COMMAND) FROM COMMANDES";
+            string max;
+
+            try
+            {
+                dt = DbInterface.Lecture(mysql, er);
+                max = dt.Rows[0][0].ToString();
+                return max;
+            }
+            catch (MonException e)
+            {
+                throw new MonException(er.MessageUtilisateur(), er.MessageApplication(), e.Message);
+            }
+        }
     }
 }

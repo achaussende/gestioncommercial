@@ -31,6 +31,11 @@ namespace Gestion_Commerciale.Presentation
                 CB_ListeClients.DataSource = unClient.LectureNoClient();
                 mesNumeros.Clear();
                 CB_ListeVendeurs.DataSource = unVendeur.LectureNoVendeur();
+
+                string max = Commandes.maxNumeroCommande();
+                int maximum = Int32.Parse(max);
+                TB_NumeroCde.Text = maximum.ToString();
+                TB_NumeroCde.Enabled = false;
             }
             catch (MonException exception)
             {

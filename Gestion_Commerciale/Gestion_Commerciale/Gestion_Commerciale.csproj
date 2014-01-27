@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Presentation\FAjoutArt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FAjoutArt.Designer.cs">
+      <DependentUpon>FAjoutArt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\FAjoutCommande.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     <Compile Include="Presentation\FModifCde.Designer.cs">
       <DependentUpon>FModifCde.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\FSupprArticle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation\FSupprArticle.Designer.cs">
+      <DependentUpon>FSupprArticle.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation\FSupprCde.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +116,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation\FAjoutArt.resx">
+      <DependentUpon>FAjoutArt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FAjoutCommande.resx">
       <DependentUpon>FAjoutCommande.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +139,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FModifCde.resx">
       <DependentUpon>FModifCde.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation\FSupprArticle.resx">
+      <DependentUpon>FSupprArticle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation\FSupprCde.resx">
       <DependentUpon>FSupprCde.cs</DependentUpon>
